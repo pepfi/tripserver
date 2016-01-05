@@ -1,0 +1,24 @@
+#wmgheader
+{
+    width:960px;
+    height:100px;
+    text-align:center;
+    margin:0 auto;
+    background:#333;
+}
+#wmglogo
+{
+    width:200px;
+    height:100px;
+    margin:0;
+    background:#999;
+    float:left;
+}
+#wmgnav
+{
+    width:760px;
+    height:50px;
+    margin:50px 0 0 0;
+    background:#123;
+    float:left;
+}
