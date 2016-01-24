@@ -6,12 +6,12 @@ class Device_model extends CI_Model{
     }
     
     public function device_nums(){
-        return $this->db->count_all('deviceinfo');
+        return $this->db->count_all('info_lteinfo');
     }
     
     public function deviceinfo($offset, $pagesize){
-        $sql = "select mac,state,ip_address,ip_location,firmware_version,content_version,first_registration_time,
-                last_registration_time from deviceinfo limit $offset,$pagesize";
+        $sql = "select mac,state,ipAddress,hostsn,ipLocation,contentVersion,firstRegistrationTime,
+                lastRegistrationTime from info_lteinfo limit $offset,$pagesize";
         
         return $this->db->query($sql);
     }
@@ -63,25 +63,26 @@ class Device_model extends CI_Model{
         
         $this->db->like('mac', $search_array['mac']);
         $this->db->like('state', $search_array['state']);
-        $this->db->like('ip_address', $search_array['ip_address']);
-        $this->db->like('firmware_version', $search_array['firmware_version']);
-        $this->db->like('ip_location', $search_array['ip_location']);
-        $this->db->like('content_version', $search_array['content_version']);
+        $this->db->like('ipAddress', $search_array['ip_address']);
+        $this->db->like('firmwareVersion', $search_array['firmware_version']);
+        $this->db->like('ipLocation', $search_array['ip_location']);
+        $this->db->like('contentVersion', $search_array['content_version']);
         
         if($search_array['first_registration_time_start']){
-            $this->db->where('first_registration_time >', $search_array['first_registration_time_start']);
+            $this->db->where('firstRegistrationTime >', $search_array['first_registration_time_start']);
         }
         if($search_array['first_registration_time_end']){
-            $this->db->where('first_registration_time <', $search_array['first_registration_time_end']);
+            $this->db->where('firstRegistrationTime <', $search_array['first_registration_time_end']);
         }
         if($search_array['last_registration_time_start']){
-            $this->db->where('last_registration_time >', $search_array['last_registration_time_start']);
+            $this->db->where('lastRegistrationTime >', $search_array['last_registration_time_start']);
         }
         if($search_array['last_registration_time_end']){
-            $this->db->where('last_registration_time <', $search_array['last_registration_time_end']);
+            $this->db->where('lastRegistrationTime <', $search_array['last_registration_time_end']);
         }
         
-        return $this->db->get_compiled_select('deviceinfo');        
+        return $this->db->get_compiled_select('info_lteinfo');  
+        
     }
     
     public function search_nums(){

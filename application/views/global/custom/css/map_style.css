@@ -1,0 +1,20 @@
+      #mymap{
+        font:12px Arial;
+        float:left;
+        width:880px;
+        height:600px;
+        float:left;
+        margin-left:0px;
+        margin-bottom:28px;
+      }
+      .circle{
+      	border-radius: 6px;
+      	border: solid 1px silver;
+       	width: 41px;
+       	height: 16px;
+       	padding: 2px;
+       	text-align: center;
+      	line-height: 13px;
+      	max-width: 50px;
+        color:white;
+      }

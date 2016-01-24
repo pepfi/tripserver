@@ -108,13 +108,13 @@
         <tr>
             <td width='5%'>&nbsp;&nbsp;<input type="checkbox" name="checkedDevice" /></td>
             <td name='mac' width='13%'><?php echo $row->mac;?></td>
-            <td width='11%'><?php echo $row->ip_address;?></td>
-            <td width='8%'><?php echo $row->ip_location;?></td>
+            <td width='11%'><?php echo $row->ipAddress;?></td>
+            <td width='8%'><?php echo $row->ipLocation;?></td>
             <td width='8%'></td>
-            <td width='11%'></td>
-            <td width='7%'><?php echo $row->content_version;?></td>
-            <td width='13%'><?php echo $row->first_registration_time;?></td>
-            <td width='13%'><?php echo $row->last_registration_time;?>	</td>
+            <td width='11%'><?php echo $row->hostsn;?></td>
+            <td width='7%'><?php echo $row->contentVersion;?></td>
+            <td width='13%'><?php echo $row->firstRegistrationTime;?></td>
+            <td width='13%'><?php echo $row->lastRegistrationTime;?>	</td>
             <td width='6%'><?php echo $row->state?'在线':'离线';?></td>
             <td width='5%'>操作</td>
         </tr>

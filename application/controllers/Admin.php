@@ -13,6 +13,8 @@ class Admin extends CI_Controller {
         $this->load->model('admin_model');
         $data['home_nav_class'] = "";
         $data['device_nav_class'] = "";
+        $data['pvuv_nav_class'] = "";
+        $data['movie_nav_class'] = "";
         $data['user_nav_class'] = '';
         $data['log_nav_class'] = '';
         $this->load->vars($data);

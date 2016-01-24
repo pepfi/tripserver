@@ -13,6 +13,8 @@ class User extends CI_Controller{
         $data['device_nav_class'] = "";
         $data['user_nav_class'] = "class='active'";
         $data['log_nav_class'] = "";
+        $data['pvuv_nav_class'] = "";
+        $data['movie_nav_class'] = "";
         $this->load->view('admin/header', $data);
         $this->load->view('admin/user');
         $this->load->view('admin/footer');

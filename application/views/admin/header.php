@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
     <link href="<?php echo base_url(); ?>application/views/global/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url('application/views/global/custom/css/map_style.css');?>" rel="stylesheet" />
     <link href="<?php echo base_url(); ?>application/views/global/custom/css/header_footer.css" rel="stylesheet">
   </head>
   <body>
@@ -27,6 +28,16 @@
             </div>
             <div class="col-md-1">
                 <ul class="nav nav-pills">
+                    <li <?php echo $pvuv_nav_class;?>><a href="/pvuv/">Pv/Uv</a></li>
+                </ul>                
+            </div>
+            <div class="col-md-1">
+                <ul class="nav nav-pills">
+                    <li style="font-size:12px;line-height:20px" <?php echo $movie_nav_class;?>><a href="/movie/">电影播放量</a></li>
+                </ul>                
+            </div>            
+            <div class="col-md-1">
+                <ul class="nav nav-pills">
                     <li <?php echo $user_nav_class;?>><a href="/user/">用户管理</a></li>
                 </ul>
             </div>
@@ -35,7 +46,6 @@
                     <li <?php echo $log_nav_class;?>><a href="/log/">日志</a></li>
                 </ul>
             </div>
-            <div class="col-md-1"></div>
             <div class="col-md-1"></div>
             <div class="col-md-2">
                 <ul class="nav nav-pills">
