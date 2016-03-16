@@ -2,7 +2,8 @@
 SQLyog Ultimate v11.11 (32 bit)
 MySQL - 5.5.27 : Database - tripserverdb
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -197,6 +198,19 @@ CREATE TABLE `pvuv-log` (
 /*Data for the table `pvuv-log` */
 
 /*Table structure for table `pvuv-total` */
+
+DROP TABLE IF EXISTS `scanaplist`;
+
+CREATE TABLE `scanaplist` (
+  `ap_mac` varchar(255) NOT NULL,
+  `wlan_src` varchar(255) NOT NULL,
+  `wlan_rssi` int(11) NOT NULL,
+  `wlan_essid` varchar(255) NOT NULL,
+  `wlan_mode` varchar(255) NOT NULL,
+  `wlan_channel` int(11) NOT NULL,
+  `wlan_encrypt` varchar(255) NOT NULL,
+  `time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `pvuv-total`;
 
